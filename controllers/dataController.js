@@ -46,6 +46,7 @@ exports.postSavedData = function (req,res) {
                         s_stockD, time_spent, round_played_at, random_number], (error)=>{
          if(error)
             throw error;
+            prompt("sorry!");
          res.status(200).json({"message":"successful"});
    });
 };
