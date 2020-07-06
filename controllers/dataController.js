@@ -40,11 +40,19 @@ exports.getserverUIDcount = function(req,res){
 exports.postSavedData = function (req,res) {
    const {uid, experiment_number, round, price_of_stockA, price_of_stockB,price_of_stockC, price_of_stockD, choices,
           b_stockA,b_stockB, b_stockC, b_stockD, s_stockA,s_stockB,s_stockC,s_stockD, time_spent, round_played_at, 
-          random_number, worker_id, question_1, question_2, question_3, question_4, question_5} = req.body;
+          random_number, worker_id, question_1, question_2, question_3, question_4, question_5,
+          question_6, question_7, question_8, question_9, question_10, question_11_i, question_11_ii, question_12, 
+          question_13, question_14_gender, question_14_age, question_14_annual_income, question_14_net_worth, 
+          question_14_education, question_14_homeowner, question_14_zipcode, bonus} = req.body;
    poolConnection.query("insert into sdg_data1 values ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14" +
-                        ", $15, $16, $17, $18, $19, $20, $21, $22, $23, $24, $25)", [uid, experiment_number, round, price_of_stockA, price_of_stockB,price_of_stockC,
-                        price_of_stockD, choices, b_stockA,b_stockB, b_stockC, b_stockD, s_stockA,s_stockB,s_stockC,
-                        s_stockD, time_spent, round_played_at, random_number, worker_id, question_1, question_2, question_3, question_4, question_5], (error)=>{
+                        ", $15, $16, $17, $18, $19, $20, $21, $22, $23, $24, $25, $26, $27, $28, $29, $30, $31, $32" +
+                        ", $33, $34, $35, $36, $37, $38, $39, $40, $41, $42)", [uid, experiment_number, round, 
+                        price_of_stockA, price_of_stockB,price_of_stockC,price_of_stockD, choices, b_stockA,b_stockB, 
+                        b_stockC, b_stockD, s_stockA,s_stockB,s_stockC,s_stockD, time_spent, round_played_at, 
+                        random_number, worker_id, question_1, question_2, question_3, question_4, question_5,
+                        question_6, question_7, question_8, question_9, question_10, question_11_i, question_11_ii, question_12, 
+                        question_13, question_14_gender, question_14_age, question_14_annual_income, question_14_net_worth, 
+                        question_14_education, question_14_homeowner, question_14_zipcode, bonus], (error)=>{
          if(error)
             throw error;
          res.status(200).json({"message":"successful"});
