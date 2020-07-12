@@ -23,7 +23,6 @@
     "pg": "^7.18.1",
     "pug": "2.0.0-beta11",
     "request": "^2.88.2",
-    "uuid": "^3.4.0",
-    "build-serve": "node --max_old_space_size=8048 ./node_modules/@angular/cli/bin/ng serve"
+    "uuid": "^3.4.0"
   }
 }
