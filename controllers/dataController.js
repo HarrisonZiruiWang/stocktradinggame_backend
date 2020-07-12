@@ -58,11 +58,6 @@ exports.postSavedData = function (req,res) {
          res.status(200).json({"message":"successful"});
    });
 
-//    poolConnection.query("insert into survey_data values ($1, $2)", [uid, question_1], (error)=>{
-//          if(error)
-//             throw error;
-//          res.status(200).json({"message":"successful"});
-//    });
 };
 
 exports.getExcelSheet = function (req,res){
