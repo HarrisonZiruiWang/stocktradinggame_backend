@@ -55,7 +55,7 @@ exports.postSavedData = function (req,res) {
                         question_6, question_7, question_8, question_9, question_10, question_11, question_12_i, question_12_ii, question_13, 
                         question_14, question_15_gender, question_15_age, question_15_annual_income, question_15_net_worth, 
                         question_15_education, question_15_homeowner, question_15_zipcode, bonus, assignment_id, is_quiz_passed,
-                        new_question_13_i, new_question_13_ii, new_question_14_i, new_question_14_ii, "new_question_14_iii"], (error)=>{
+                        new_question_13_i, new_question_13_ii, new_question_14_i, new_question_14_ii, new_question_14_iii], (error)=>{
          if(error)
             throw error;
          res.status(200).json({"message":"successful"});
