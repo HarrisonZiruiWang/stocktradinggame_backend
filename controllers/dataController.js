@@ -45,6 +45,7 @@ exports.postSavedData = function (req,res) {
           question_14, question_15_gender, question_15_age, question_15_annual_income, question_15_net_worth, 
           question_15_education, question_15_homeowner, question_15_zipcode, bonus, assignment_id, is_quiz_passed,
           new_question_13_i, new_question_13_ii, new_question_14_i, new_question_14_ii, new_question_14_iii} = req.body;
+
    poolConnection.query("insert into sdg_data1 values ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14" +
                         ", $15, $16, $17, $18, $19, $20, $21, $22, $23, $24, $25, $26, $27, $28, $29, $30, $31, $32" +
                         ", $33, $34, $35, $36, $37, $38, $39, $40, $41, $42, $43, $44, $45, $46, $47, $48, $49, $50)", [uid, experiment_number, round, 
@@ -54,7 +55,7 @@ exports.postSavedData = function (req,res) {
                         question_6, question_7, question_8, question_9, question_10, question_11, question_12_i, question_12_ii, question_13, 
                         question_14, question_15_gender, question_15_age, question_15_annual_income, question_15_net_worth, 
                         question_15_education, question_15_homeowner, question_15_zipcode, bonus, assignment_id, is_quiz_passed,
-                        new_question_13_i, new_question_13_ii, new_question_14_i, new_question_14_ii, new_question_14_iii], (error)=>{
+                        new_question_13_i, new_question_13_ii, new_question_14_i, new_question_14_ii, "new_question_14_iii"], (error)=>{
          if(error)
             throw error;
          res.status(200).json({"message":"successful"});
