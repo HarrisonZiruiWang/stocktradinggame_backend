@@ -8,6 +8,8 @@ router.get('/', function(req, res, next) {
 });
 router.post('/login', dataController.login);
 router.post('/postSavedData', dataController.postSavedData);
+router.post('/postSavedDataCh', dataController.postSavedDataCh);
+
 router.get('/getServerID', dataController.getserverUIDcount);
 router.get('/getData', dataController.getExcelSheet);
 module.exports = router;
