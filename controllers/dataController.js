@@ -68,19 +68,19 @@ exports.postSavedDataCh = function (req,res) {
            b_stockA,b_stockB, b_stockC, b_stockD, s_stockA,s_stockB,s_stockC,s_stockD, time_spent, round_played_at, 
            random_number, worker_id, question_1, question_2, question_3, question_4, question_5,
            question_6, question_7, question_8, question_9, question_10, question_11, question_12_i, question_12_ii, question_13, 
-           question_14, question_15_gender, question_15_age, question_15_annual_income, question_15_net_worth, 
-           question_15_education, question_15_homeowner, question_15_zipcode, bonus, assignment_id, is_quiz_passed,
+           question_14, question_15_gender, question_15_age, question_15_tel, question_15_education, 
+           question_15_major, bonus, assignment_id, is_quiz_passed,
            new_question_13_i, new_question_13_ii, new_question_14_i, new_question_14_ii, new_question_14_iii} = req.body;
  
     poolConnection.query("insert into sdg_data_ch values ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14" +
                          ", $15, $16, $17, $18, $19, $20, $21, $22, $23, $24, $25, $26, $27, $28, $29, $30, $31, $32" +
-                         ", $33, $34, $35, $36, $37, $38, $39, $40, $41, $42, $43, $44, $45, $46, $47, $48, $49, $50)", [uid, experiment_number, round, 
+                         ", $33, $34, $35, $36, $37, $38, $39, $40, $41, $42, $43, $44, $45, $46, $47, $48)", [uid, experiment_number, round, 
                          price_of_stockA, price_of_stockB,price_of_stockC,price_of_stockD, choices, b_stockA,b_stockB, 
                          b_stockC, b_stockD, s_stockA,s_stockB,s_stockC,s_stockD, time_spent, round_played_at, 
                          random_number, worker_id, question_1, question_2, question_3, question_4, question_5,
                          question_6, question_7, question_8, question_9, question_10, question_11, question_12_i, question_12_ii, question_13, 
-                         question_14, question_15_gender, question_15_age, question_15_annual_income, question_15_net_worth, 
-                         question_15_education, question_15_homeowner, question_15_zipcode, bonus, assignment_id, is_quiz_passed,
+                         question_14, question_15_gender, question_15_age, question_15_tel, question_15_education, 
+                         question_15_major, bonus, assignment_id, is_quiz_passed,
                          new_question_13_i, new_question_13_ii, new_question_14_i, new_question_14_ii, new_question_14_iii], (error)=>{
           if(error)
              throw error;
