@@ -75,7 +75,7 @@ exports.postSavedDataCh = function (req,res) {
  
     poolConnection.query("insert into sdg_data_ch values ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14" +
                          ", $15, $16, $17, $18, $19, $20, $21, $22, $23, $24, $25, $26, $27, $28, $29, $30, $31, $32" +
-                         ", $33, $34, $35, $36, $37, $38, $39, $40, $41, $42, $43, $44, $45, $46, $47, $48, $49, $50)", [uid, experiment_number, round, 
+                         ", $33, $34, $35, $36, $37, $38, $39, $40, $41, $42, $43, $44, $45, $46, $47, $48)", [uid, experiment_number, round, 
                          price_of_stockA, price_of_stockB,price_of_stockC,price_of_stockD, choices, b_stockA,b_stockB, 
                          b_stockC, b_stockD, s_stockA,s_stockB,s_stockC,s_stockD, time_spent, round_played_at, 
                          random_number, question_1, question_2, question_3, question_4, question_5,
